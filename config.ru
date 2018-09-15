@@ -24,7 +24,11 @@ class AlphaBot < Roda
         {challenge: r.params["challenge"]}
       when "event_callback"
         event = r.params["event"]
-        break {} if event.has_key?("thread_ts")
+
+        # Only send for actual messages to #labs-seattle
+        break {} if [ event["channel"] != "C4C959YHF",
+                      event.has_key?("thread_ts"),
+                      event.has_key?("subtype") ].any?
 
         args = {
           channel: event["channel"],
