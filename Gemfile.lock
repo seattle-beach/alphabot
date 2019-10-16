@@ -1,23 +1,21 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    faraday (0.15.2)
+    faraday (0.17.0)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.25)
-    listen (3.1.5)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-      ruby_dep (~> 1.2)
-    multipart-post (2.0.0)
-    rack (2.0.5)
+    ffi (1.11.1)
+    listen (3.2.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
+    multipart-post (2.1.1)
+    rack (2.0.7)
     rb-fsevent (0.10.3)
-    rb-inotify (0.9.10)
-      ffi (>= 0.5.0, < 2)
+    rb-inotify (0.10.0)
+      ffi (~> 1.0)
     rerun (0.13.0)
       listen (~> 3.0)
-    roda (3.12.0)
+    roda (3.25.0)
       rack
-    ruby_dep (1.5.0)
 
 PLATFORMS
   ruby
@@ -28,7 +26,7 @@ DEPENDENCIES
   roda
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.6.4p104
 
 BUNDLED WITH
-   1.16.2
+   1.17.2
