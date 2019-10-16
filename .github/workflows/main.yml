@@ -18,6 +18,8 @@ jobs:
 
     - name: Target the right org and space
       run: ./cf target -o seattle-beach -s alphabot
+      if: "false"
 
     - name: Deploy app
       run: ./cf push
+      if: "false"
