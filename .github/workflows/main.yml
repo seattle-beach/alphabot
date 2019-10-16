@@ -14,7 +14,10 @@ jobs:
       run: curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&source=github" | tar -zx
 
     - name: Log in to PWS
-      run: ./cf login -a api.run.pivotal.io -u ${{ secrets.CF_USERNAME }} -p ${{ secrets.CF_PASSWORD }} -o seattle-beach -s alphabot
+      run: ./cf login -a api.run.pivotal.io -u ${{ secrets.CF_USERNAME }} -p ${{ secrets.CF_PASSWORD }}
+
+    - name: Target the right org and space
+      run: ./cf target -o seattle-beach -s alphabot
 
     - name: Deploy app
       run: ./cf push
